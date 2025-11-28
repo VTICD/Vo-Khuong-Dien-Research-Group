@@ -5,35 +5,22 @@
   <title>Vo Khuong Dien Research Group | Computational Quantum Materials</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-        content="Computational quantum materials research focusing on excitons, valleytronics, topological physics, and thermoelectric transport." />
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+        content="Vo Khuong Dien Research Group – Theoretical and computational research on Condensed Matter Physics and Nanoscience." />
   <!-- TailwindCSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
   <style>
     html {
       scroll-behavior: smooth;
     }
-    body {
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    }
     /* Simple shadow for sticky header */
     .nav-scrolled {
-      box-shadow: 0 4px 18px rgba(0,0,0,0.18);
-      background: rgba(15,23,42,0.88);
-      backdrop-filter: blur(16px);
-    }
-    /* Active navbar link */
-    .nav-active {
-      color: #a5b4fc; /* indigo-300 */
-      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+      background: rgba(15,23,42,0.9);
+      backdrop-filter: blur(12px);
     }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-100">
+<body class="bg-slate-950 text-slate-100 font-sans">
   <!-- HEADER / NAVBAR -->
   <header id="top" class="fixed top-0 inset-x-0 z-40 transition-colors">
     <nav class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
@@ -50,14 +37,14 @@
 
       <!-- Desktop menu -->
       <div class="hidden md:flex items-center gap-6 text-xs sm:text-sm font-medium">
-        <a href="#" data-section="welcome" class="nav-link hover:text-indigo-300 transition-colors">Welcome</a>
-        <a href="#" data-section="people" class="nav-link hover:text-indigo-300 transition-colors">People</a>
-        <a href="#" data-section="research" class="nav-link hover:text-indigo-300 transition-colors">Research</a>
-        <a href="#" data-section="publications" class="nav-link hover:text-indigo-300 transition-colors">Publications</a>
-        <a href="#" data-section="teaching" class="nav-link hover:text-indigo-300 transition-colors">Teaching</a>
-        <a href="#" data-section="codes" class="nav-link hover:text-indigo-300 transition-colors">Codes / Tools</a>
-        <a href="#" data-section="gallery" class="nav-link hover:text-indigo-300 transition-colors">Gallery</a>
-        <a href="#" data-section="contact" class="nav-link hover:text-indigo-300 transition-colors">Contact</a>
+        <a href="#" data-section="welcome" class="hover:text-indigo-300 transition-colors">Welcome</a>
+        <a href="#" data-section="people" class="hover:text-indigo-300 transition-colors">People</a>
+        <a href="#" data-section="research" class="hover:text-indigo-300 transition-colors">Research</a>
+        <a href="#" data-section="publications" class="hover:text-indigo-300 transition-colors">Publications</a>
+        <a href="#" data-section="teaching" class="hover:text-indigo-300 transition-colors">Teaching</a>
+        <a href="#" data-section="codes" class="hover:text-indigo-300 transition-colors">Codes / Tools</a>
+        <a href="#" data-section="gallery" class="hover:text-indigo-300 transition-colors">Gallery</a>
+        <a href="#" data-section="contact" class="hover:text-indigo-300 transition-colors">Contact</a>
       </div>
 
       <!-- Mobile toggle -->
@@ -71,14 +58,14 @@
     <div id="mobile-menu"
          class="md:hidden hidden border-t border-slate-800 bg-slate-950/95 backdrop-blur">
       <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-2 text-xs font-medium">
-        <a href="#" data-section="welcome" class="nav-link hover:text-indigo-300 transition-colors">Welcome</a>
-        <a href="#" data-section="people" class="nav-link hover:text-indigo-300 transition-colors">People</a>
-        <a href="#" data-section="research" class="nav-link hover:text-indigo-300 transition-colors">Research</a>
-        <a href="#" data-section="publications" class="nav-link hover:text-indigo-300 transition-colors">Publications</a>
-        <a href="#" data-section="teaching" class="nav-link hover:text-indigo-300 transition-colors">Teaching</a>
-        <a href="#" data-section="codes" class="nav-link hover:text-indigo-300 transition-colors">Codes / Tools</a>
-        <a href="#" data-section="gallery" class="nav-link hover:text-indigo-300 transition-colors">Gallery</a>
-        <a href="#" data-section="contact" class="nav-link hover:text-indigo-300 transition-colors">Contact</a>
+        <a href="#" data-section="welcome" class="hover:text-indigo-300 transition-colors">Welcome</a>
+        <a href="#" data-section="people" class="hover:text-indigo-300 transition-colors">People</a>
+        <a href="#" data-section="research" class="hover:text-indigo-300 transition-colors">Research</a>
+        <a href="#" data-section="publications" class="hover:text-indigo-300 transition-colors">Publications</a>
+        <a href="#" data-section="teaching" class="hover:text-indigo-300 transition-colors">Teaching</a>
+        <a href="#" data-section="codes" class="hover:text-indigo-300 transition-colors">Codes / Tools</a>
+        <a href="#" data-section="gallery" class="hover:text-indigo-300 transition-colors">Gallery</a>
+        <a href="#" data-section="contact" class="hover:text-indigo-300 transition-colors">Contact</a>
       </div>
     </div>
   </header>
@@ -210,6 +197,7 @@
               Leader
             </p>
 
+            <!-- Nếu sau này có ảnh, thêm <img> ở đây -->
             <img src="img/dien-vo.jpg"
                  alt="Dr. Vo Khuong Dien"
                  class="w-32 h-32 object-cover rounded-full border border-slate-700 mb-4 mx-auto md:mx-0">
@@ -295,86 +283,88 @@
     <!-- RESEARCH -->
     <section id="research" class="border-t border-slate-800 bg-slate-900/40 hidden">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 class="text-3xl font-semibold mb-8 tracking-tight text-indigo-300">Research Areas</h2>
+        <h2 class="text-2xl font-semibold mb-6">Research</h2>
 
-        <div class="grid md:grid-cols-2 gap-8 text-xs sm:text-sm">
+        <div class="grid md:grid-cols-2 gap-5 text-xs sm:text-sm">
           <!-- Card 1: Exciton Physics -->
-          <div class="rounded-2xl border border-slate-800 bg-slate-950/70 shadow-xl overflow-hidden flex flex-col">
-            <div class="w-full h-100 sm:h-120 overflow-hidden">
+          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-5 flex flex-col gap-3">
+            <div class="w-full h-100 sm:h-120 rounded-xl overflow-hidden bg-slate-900/70">
               <img
                 src="img/light-mater.jpg"
                 alt="Illustration of excitons in 2D materials"
-                class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-all"
+                class="w-full h-full object-cover"
               />
             </div>
-            <div class="p-5 flex flex-col gap-3">
-              <h3 class="font-semibold text-indigo-200 text-base sm:text-lg">
+            <div>
+              <h3 class="font-semibold text-indigo-200 mb-2">
                 Exciton Physics in 2D Materials
               </h3>
-              <p class="text-slate-300 leading-relaxed">
-                We investigate how crystal-symmetry breaking in low-dimensional materials enables
-                valley-selective optical transitions and polarization-dependent excitons. Using
-                first-principles GW–BSE and Wannier-based models, we reveal how different light
-                polarizations couple to distinct valleys, providing a robust degree of freedom
-                for valleytronic device concepts.
+              <p class="text-slate-300 mb-2">
+                This work investigates how crystal-symmetry breaking in monolayer SnS and SnSe enables
+                robust valley-selective optical transitions. Using first-principles GW-BSE calculations,
+                the study reveals that different polarization states of light couple selectively to 
+                distinct electronic valleys, providing a controllable valley degree of freedom. 
+                The results identify tin chalcogenide monolayers as promising candidates for next-generation 
+                valleytronic devices where information can be encoded and manipulated through valley polarization.
               </p>
               <ul class="list-disc list-inside text-slate-300 space-y-1">
-                <li>
-                  Nguyen Thanh Tien, Pham Thi Bich Thao, Nguyen Thi Han,
-                  <strong>Vo Khuong Dien</strong>.
-                  <span class="italic">“Symmetry-driven valleytronics in single-layer tin chalcogenides SnS and SnSe.”</span>
-                  <strong>PRB</strong> 109, 155416 (2024).
-                  DOI:
-                  <a class="text-indigo-300 hover:text-indigo-200"
-                     href="https://doi.org/10.1103/PhysRevB.109.155416"
-                     target="_blank">
-                    10.1103/PhysRevB.109.155416
-                  </a>
-                </li>
+              <li>
+              Nguyen Thanh Tien, Pham Thi Bich Thao, Nguyen Thi Han, <strong>Vo Khuong Dien</strong>.
+              <span class="italic">“Symmetry-driven valleytronics in single-layer tin chalcogenides SnS and SnSe.”</span>
+              <strong>PRB</strong> 109, 155416 (2024).
+              DOI:
+              <a class="text-indigo-300 hover:text-indigo-200"
+               href="https://doi.org/10.1103/PhysRevB.109.155416"
+               target="_blank">
+               10.1103/PhysRevB.109.155416
+              </a>
+          </li>
               </ul>
             </div>
           </div>
 
           <!-- Card 2: Machine-Learning-Accelerated Thermoelectric Design -->
-          <div class="rounded-2xl border border-slate-800 bg-slate-950/70 shadow-xl overflow-hidden flex flex-col">
-            <div class="w-full h-48 sm:h-56 overflow-hidden">
+          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-5 flex flex-col gap-3">
+            <div class="w-full h-50 sm:h-50 rounded-xl overflow-hidden bg-slate-900/70">
               <img
                 src="img/Machine learning.jpg"
                 alt="Machine-Learning-Accelerated Thermoelectric Design"
-                class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-all"
+                class="w-full h-full object-cover"
               />
             </div>
-            <div class="p-5 flex flex-col gap-3">
-              <h3 class="font-semibold text-emerald-200 text-base sm:text-lg">
+            <div>
+              <h3 class="font-semibold text-emerald-200 mb-2">
                 Machine-Learning-Accelerated Thermoelectric Design
               </h3>
-              <p class="text-slate-300 leading-relaxed">
-                We combine density-functional theory with machine-learning potentials to explore the
-                thermoelectric potential of pentagonal 2D materials such as penta-InP<sub>5</sub>.
-                Our results show ultralow lattice thermal conductivity, favorable band convergence,
-                and promising figures of merit at room temperature for both electron and hole doping,
-                highlighting their potential for flexible thermoelectric devices.
+              <p class="text-slate-300 mb-2">
+                This study uses first-principles calculations combined with machine-learning potentials
+                to explore the thermoelectric (TE) potential of the monolayer penta-InP5, a two-dimensional
+                material with a pentagonal lattice. The results reveal that penta-InP5 possesses remarkably
+                low lattice thermal conductivity and favorable electronic transport properties — leading to
+                a high TE figure of merit (ZT) at room temperature: ~0.51 for hole doping and ~0.42 for electron doping. 
+                Additionally, penta-InP5 exhibits good mechanical flexibility (in-plane stiffness ~52 N/m, fracture strain ~23 %),
+                making it a promising candidate for flexible and wearable thermoelectric applications. Using first-principles
+                electron–phonon coupling and phonon anharmonicity, we explore ways to tune lattice thermal conductivity and ZT in low-dimensional materials.
               </p>
               <ul class="list-disc list-inside text-slate-300 space-y-1">
-                <li>
-                  Nguyen Thanh Tien, Pham Thi Bich Thao, Duy Khanh Nguyen, Nhat Le Thanh,
-                  <strong>Vo Khuong Dien</strong>.
-                  <span class="italic">“Thermoelectric properties of penta-InP<sub>5</sub>: A first-principles and machine learning study.”</span>
-                  <strong>Journal of Applied Physics</strong> 137, 8 (2025).
-                  DOI:
-                  <a class="text-indigo-300 hover:text-indigo-200"
-                     href="https://doi.org/10.1063/5.0251741"
-                     target="_blank">
-                    10.1063/5.0251741
-                  </a>
-                </li>
+              <li>
+              Nguyen Thanh Tien, Pham Thi Bich Thao, Duy Khanh Nguyen, Nhat Le Thanh, <strong>Vo Khuong Dien</strong>.
+              <span class="italic">“Thermoelectric properties of penta-InP<sub>5</sub>: A first-principles and machine learning study.”</span>
+              <strong>Journal of Applied Physics</strong> 137, 8 (2025).
+              DOI:
+              <a class="text-indigo-300 hover:text-indigo-200"
+               href="https://doi.org/10.1063/5.0251741"
+               target="_blank">
+              10.1063/5.0251741
+            </a>
+          </li>
               </ul>
             </div>
           </div>
-
         </div>
       </div>
     </section>
+
 
     <!-- PUBLICATIONS -->
     <section id="publications" class="border-t border-slate-800 hidden">
@@ -385,8 +375,7 @@
         <ol class="space-y-4 text-xs sm:text-sm text-slate-200 list-decimal list-inside">
           <!-- 2025 -->
           <li>
-            Nguyen Thanh Tien, Pham Thi Bich Thao, Duy Khanh Nguyen, Nhat Le Thanh,
-            <strong>Vo Khuong Dien</strong>.
+            Nguyen Thanh Tien, Pham Thi Bich Thao, Duy Khanh Nguyen, Nhat Le Thanh, <strong>Vo Khuong Dien</strong>.
             <span class="italic">“Thermoelectric properties of penta-InP<sub>5</sub>: A first-principles and machine learning study.”</span>
             <strong>Journal of Applied Physics</strong> 137, 8 (2025).
             DOI:
@@ -399,8 +388,7 @@
 
           <!-- 2024 -->
           <li>
-            Nguyen Thanh Tien, Pham Thi Bich Thao, Nguyen Thi Han,
-            <strong>Vo Khuong Dien</strong>.
+            Nguyen Thanh Tien, Pham Thi Bich Thao, Nguyen Thi Han, <strong>Vo Khuong Dien</strong>.
             <span class="italic">“Symmetry-driven valleytronics in single-layer tin chalcogenides SnS and SnSe.”</span>
             <strong>PRB</strong> 109, 155416 (2024).
             DOI:
@@ -456,6 +444,7 @@
         </p>
       </div>
     </section>
+
 
     <!-- TEACHING -->
     <section id="teaching" class="border-t border-slate-800 bg-slate-900/40 hidden">
@@ -666,17 +655,6 @@
           sec.classList.add('hidden');
         }
       });
-
-      // active nav link
-      sectionLinks.forEach(link => {
-        const target = link.getAttribute('data-section');
-        if (target === id) {
-          link.classList.add('nav-active');
-        } else {
-          link.classList.remove('nav-active');
-        }
-      });
-
       window.scrollTo({ top: 0, behavior: 'instant' });
     }
 
@@ -701,7 +679,7 @@
         if (target) {
           showSection(target);
         }
-        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        if (!mobileMenu.classList.contains('hidden')) {
           mobileMenu.classList.add('hidden');
         }
       });
@@ -709,9 +687,18 @@
 
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Initial section
     showSection('welcome');
   </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
 
