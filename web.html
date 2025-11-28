@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vo Khuong Dien Research Group | Computational Quantum Materials</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="Vo Khuong Dien Research Group – Theoretical and computational research on excitons, 2D materials, valleytronics, and thermoelectric transport." />
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Simple shadow for sticky header */
+    .nav-scrolled {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+      background: rgba(15,23,42,0.9);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans">
+  <!-- HEADER / NAVBAR -->
+  <header id="top" class="fixed top-0 inset-x-0 z-40 transition-colors">
+    <nav class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <div class="h-9 w-9 rounded-xl bg-indigo-500 flex items-center justify-center text-sm font-semibold tracking-wide">
+          VKD
+        </div>
+        <div class="leading-tight">
+          <div class="font-semibold text-sm sm:text-base">Vo Khuong Dien Research Group</div>
+          <div class="text-[11px] sm:text-xs text-slate-300">Computational Quantum Materials</div>
+        </div>
+      </div>
+
+      <!-- Desktop menu -->
+      <div class="hidden md:flex items-center gap-6 text-xs sm:text-sm font-medium">
+        <a href="#" data-section="welcome" class="hover:text-indigo-300 transition-colors">Welcome</a>
+        <a href="#" data-section="people" class="hover:text-indigo-300 transition-colors">People</a>
+        <a href="#" data-section="research" class="hover:text-indigo-300 transition-colors">Research</a>
+        <a href="#" data-section="publications" class="hover:text-indigo-300 transition-colors">Publications</a>
+        <a href="#" data-section="teaching" class="hover:text-indigo-300 transition-colors">Teaching</a>
+        <a href="#" data-section="codes" class="hover:text-indigo-300 transition-colors">Codes / Tools</a>
+        <a href="#" data-section="gallery" class="hover:text-indigo-300 transition-colors">Gallery</a>
+        <a href="#" data-section="contact" class="hover:text-indigo-300 transition-colors">Contact</a>
+      </div>
+
+      <!-- Mobile toggle -->
+      <button id="menu-toggle"
+              class="md:hidden inline-flex items-center justify-center rounded-md border border-slate-700 px-2 py-1 text-xs">
+        Menu
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu"
+         class="md:hidden hidden border-t border-slate-800 bg-slate-950/95 backdrop-blur">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-2 text-xs font-medium">
+        <a href="#" data-section="welcome" class="hover:text-indigo-300 transition-colors">Welcome</a>
+        <a href="#" data-section="people" class="hover:text-indigo-300 transition-colors">People</a>
+        <a href="#" data-section="research" class="hover:text-indigo-300 transition-colors">Research</a>
+        <a href="#" data-section="publications" class="hover:text-indigo-300 transition-colors">Publications</a>
+        <a href="#" data-section="teaching" class="hover:text-indigo-300 transition-colors">Teaching</a>
+        <a href="#" data-section="codes" class="hover:text-indigo-300 transition-colors">Codes / Tools</a>
+        <a href="#" data-section="gallery" class="hover:text-indigo-300 transition-colors">Gallery</a>
+        <a href="#" data-section="contact" class="hover:text-indigo-300 transition-colors">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main class="pt-20">
+    <!-- HERO / WELCOME -->
+    <section id="welcome" class="relative overflow-hidden">
+      <div class="absolute inset-0 opacity-30 pointer-events-none" aria-hidden="true">
+        <div class="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-indigo-500 blur-3xl"></div>
+        <div class="absolute top-40 right-0 h-72 w-72 rounded-full bg-emerald-500 blur-3xl"></div>
+      </div>
+
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-indigo-300 mb-4">
+            Vo Khuong Dien Research Group
+          </p>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight mb-4">
+            Theoretical &amp; Computational Research
+            <span class="block text-indigo-300">on Excitons in 2D Quantum Materials</span>
+          </h1>
+          <p class="text-sm sm:text-base text-slate-200 mb-4">
+            Our group focuses on exciton physics, light–matter interactions, valleytronics,
+            and thermoelectric transport in low-dimensional materials using
+            first-principles and many-body methods.
+          </p>
+          <p class="text-xs sm:text-sm text-slate-300 mb-6">
+            Nhóm của chúng tôi tại Việt Nam nghiên cứu lý thuyết và mô phỏng số
+            về vật liệu hai chiều, exciton, và hiện tượng vận chuyển lượng tử, hướng tới
+            các ứng dụng trong điện tử, quang điện tử và vật liệu năng lượng.
+          </p>
+
+          <div class="flex flex-wrap gap-3">
+            <a href="#" data-section="people"
+               class="inline-flex items-center justify-center rounded-full bg-indigo-500 px-4 py-2 text-xs sm:text-sm font-medium hover:bg-indigo-400 transition-colors">
+              Join our group
+            </a>
+            <a href="#" data-section="contact"
+               class="inline-flex items-center justify-center rounded-full border border-slate-600 px-4 py-2 text-xs sm:text-sm font-medium hover:border-indigo-400 hover:text-indigo-200 transition-colors">
+              Contact
+            </a>
+          </div>
+
+          <!-- Quick bullets -->
+          <div class="mt-8 grid grid-cols-2 gap-3 text-xs sm:text-sm">
+            <div class="border border-slate-800 rounded-xl p-3 bg-slate-900/60">
+              <div class="font-semibold text-indigo-200 mb-1">Excitons &amp; 2D materials</div>
+              <p class="text-slate-300">
+                BSE, GW, Wannierization and model Hamiltonians for TMDCs, plumbene, penta-materials, etc.
+              </p>
+            </div>
+            <div class="border border-slate-800 rounded-xl p-3 bg-slate-900/60">
+              <div class="font-semibold text-emerald-200 mb-1">Thermoelectric &amp; transport</div>
+              <p class="text-slate-300">
+                Electron–phonon coupling, lattice thermal conductivity, and transport coefficients.
+              </p>
+            </div>
+            <div class="border border-slate-800 rounded-xl p-3 bg-slate-900/60">
+              <div class="font-semibold text-sky-200 mb-1">Valleytronics &amp; topology</div>
+              <p class="text-slate-300">
+                Berry curvature, topological protection, spin–valley locking in 2D systems.
+              </p>
+            </div>
+            <div class="border border-slate-800 rounded-xl p-3 bg-slate-900/60">
+              <div class="font-semibold text-fuchsia-200 mb-1">Educational activities</div>
+              <p class="text-slate-300">
+                Courses, tutorials, and workshops on quantum simulation and computational materials.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: News card -->
+        <div class="lg:ml-6">
+          <div class="border border-slate-800 rounded-2xl bg-slate-900/60 p-5 sm:p-6 shadow-xl">
+            <h2 class="text-lg sm:text-xl font-semibold flex items-center gap-2 mb-3">
+              <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              News &amp; Highlights
+            </h2>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-200">
+              <li>
+                <span class="font-semibold text-indigo-200">2025 ·</span>
+                Submitted a manuscript on exciton–phonon coupling in plumbene-based heterostructures.
+              </li>
+              <li>
+                <span class="font-semibold text-indigo-200">2024 ·</span>
+                Launched the <span class="italic">WannierBSE</span> tutorial series for 2D exciton calculations.
+              </li>
+              <li>
+                <span class="font-semibold text-indigo-200">2023 ·</span>
+                Published works on tunable thermal transport in penta-graphene and penta-XP<sub>5</sub> systems.
+              </li>
+              <li>
+                <span class="font-semibold text-indigo-200">2022 ·</span>
+                Started collaborations on valley splitting and symmetry-breaking in HfN<sub>2</sub>.
+              </li>
+            </ul>
+
+            <a href="#" data-section="news"
+               class="mt-4 inline-flex text-[11px] sm:text-xs text-indigo-300 hover:text-indigo-200 transition-colors">
+              View all news →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS FULL SECTION -->
+    <section id="news" class="border-t border-slate-800 bg-slate-900/40 hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <h2 class="text-2xl font-semibold mb-4">News</h2>
+        <p class="text-xs sm:text-sm text-slate-300 mb-4">
+          Below is a sample format. You can keep adding items here manually.
+        </p>
+        <ul class="space-y-2 text-xs sm:text-sm text-slate-200">
+          <li>2025 · [Update here: e.g., “Dr. Vo invited talk at …”]</li>
+          <li>2024 · [Update here: student awards, new papers, workshops]</li>
+          <li>2023 · [Update here: collaborations, invited seminars, etc.]</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PEOPLE -->
+    <section id="people" class="border-t border-slate-800 hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 class="text-2xl font-semibold mb-6">People</h2>
+
+        <!-- LEADER -->
+        <div class="grid md:grid-cols-[2fr,3fr] gap-6 mb-8 items-start">
+          <div class="border border-slate-800 rounded-2xl bg-slate-900/60 p-5">
+            <h3 class="font-semibold text-lg mb-1">Dr. Vo Khuong Dien</h3>
+            <p class="text-xs text-indigo-200 mb-4 font-medium uppercase tracking-wide">
+              Leader
+            </p>
+
+            <!-- Nếu sau này có ảnh, thêm <img> ở đây -->
+            <img src="img/dien-vo.jpg"
+                 alt="Dr. Vo Khuong Dien"
+                 class="w-32 h-32 object-cover rounded-full border border-slate-700 mb-4 mx-auto md:mx-0">
+
+            <!-- Education -->
+            <div class="mb-4">
+              <h4 class="text-sm font-semibold text-indigo-200 mb-1">Education</h4>
+              <ul class="list-disc list-inside text-xs sm:text-sm text-slate-200 space-y-1">
+                <li>Dr. in Physics, National Cheng Kung University, Tainan, Taiwan (2022)</li>
+                <li>B.Sc. in Engineering Physics, Can Tho University, Viet Nam (2018)</li>
+              </ul>
+            </div>
+
+            <!-- Employment experiences -->
+            <div class="mb-4">
+              <h4 class="text-sm font-semibold text-indigo-200 mb-1">Employment Experiences</h4>
+              <ul class="list-disc list-inside text-xs sm:text-sm text-slate-200 space-y-1">
+                <li>Lecturer, Can Tho University, Can Tho, Viet Nam (12/2025–Now)</li>
+                <li>Researcher–Lecturer, FPT University, Can Tho, Viet Nam (06/2025–12/2025)</li>
+                <li>Postdoctoral Researcher, National Yang Ming Chiao Tung University, Hsinchu, Taiwan (2023–2025)</li>
+              </ul>
+            </div>
+
+            <h4 class="text-sm font-semibold text-indigo-200 mb-2">Contact Information</h4>
+            <dl class="text-xs sm:text-sm text-slate-300 space-y-1">
+              <div class="flex gap-2">
+                <dt class="min-w-[60px] font-semibold">Email</dt>
+                <dd>dienvk[at]example.edu (replace with real)</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="min-w-[60px] font-semibold">Affiliation</dt>
+                <dd>Department of Physics / Engineering, Vietnam</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="min-w-[60px] font-semibold">Office</dt>
+                <dd>[Room, Building, Campus]</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- Students & collaborators -->
+          <div class="border border-slate-800 rounded-2xl bg-slate-900/60 p-5">
+            <h3 class="font-semibold text-base sm:text-lg mb-3">Students &amp; Collaborators</h3>
+            <p class="text-xs sm:text-sm text-slate-300 mb-3">
+              This is a template list. Replace with real names and positions.
+            </p>
+            <div class="grid sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+              <div class="border border-slate-800 rounded-xl p-3 bg-slate-950/70">
+                <div class="font-semibold text-slate-100">[Student A]</div>
+                <div class="text-slate-300">M.Sc. student – exciton dynamics in TMDC heterostructures.</div>
+              </div>
+              <div class="border border-slate-800 rounded-xl p-3 bg-slate-950/70">
+                <div class="font-semibold text-slate-100">[Student B]</div>
+                <div class="text-slate-300">B.Sc. student – Wannier-based band interpolation.</div>
+              </div>
+              <div class="border border-slate-800 rounded-xl p-3 bg-slate-950/70">
+                <div class="font-semibold text-slate-100">[Collaborator 1]</div>
+                <div class="text-slate-300">Thermoelectric transport in penta-materials.</div>
+              </div>
+              <div class="border border-slate-800 rounded-xl p-3 bg-slate-950/70">
+                <div class="font-semibold text-slate-100">[Collaborator 2]</div>
+                <div class="text-slate-300">Spin–valley physics and topological phenomena.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Openings -->
+        <div id="openings" class="border border-dashed border-indigo-500/60 rounded-2xl bg-slate-900/40 p-5">
+          <h3 class="text-base sm:text-lg font-semibold mb-2">Openings</h3>
+          <p class="text-xs sm:text-sm text-slate-200 mb-2">
+            We welcome motivated students and collaborators who are interested in quantum materials,
+            exciton physics, and computational methods.
+          </p>
+          <ul class="list-disc list-inside text-xs sm:text-sm text-slate-300 mb-2 space-y-1">
+            <li>B.Sc. / M.Sc. projects on exciton and thermoelectric properties in 2D materials.</li>
+            <li>Collaborations on Wannier-based GW–BSE, electron–phonon coupling, and valleytronics.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" class="border-t border-slate-800 bg-slate-900/40 hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 class="text-2xl font-semibold mb-6">Research</h2>
+
+        <div class="grid md:grid-cols-2 gap-5 text-xs sm:text-sm">
+          <!-- Card 1: Exciton Physics -->
+          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-5 flex flex-col gap-3">
+            <div class="w-full h-32 sm:h-40 rounded-xl overflow-hidden bg-slate-900/70">
+              <img
+                src="img/research-exciton.jpg"
+                alt="Illustration of excitons in 2D materials"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <h3 class="font-semibold text-indigo-200 mb-2">
+                Exciton Physics in 2D Materials
+              </h3>
+              <p class="text-slate-300 mb-2">
+                We study bound electron–hole pairs in monolayers and van der Waals heterostructures
+                using GW–BSE, effective models, and real-space Wannier functions.
+              </p>
+              <ul class="list-disc list-inside text-slate-300 space-y-1">
+                <li>Neutral and charged excitons in TMDCs and plumbene-based systems.</li>
+                <li>Electric-field, strain, and dielectric engineering of exciton spectra.</li>
+                <li>Exciton localization, valley polarization, and spin textures.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 2: Thermoelectric & Transport -->
+          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-5 flex flex-col gap-3">
+            <div class="w-full h-32 sm:h-40 rounded-xl overflow-hidden bg-slate-900/70">
+              <img
+                src="img/research-thermoelectric.jpg"
+                alt="Schematic of thermoelectric transport in low-dimensional materials"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <h3 class="font-semibold text-emerald-200 mb-2">
+                Thermoelectric &amp; Lattice Thermal Transport
+              </h3>
+              <p class="text-slate-300 mb-2">
+                Using first-principles electron–phonon coupling and phonon anharmonicity, we explore
+                ways to tune lattice thermal conductivity and ZT in low-dimensional materials.
+              </p>
+              <ul class="list-disc list-inside text-slate-300 space-y-1">
+                <li>Penta-graphene and penta-XP<sub>5</sub> (X = Al, Ga, In).</li>
+                <li>Defect, doping, and strain engineering for ZT enhancement.</li>
+                <li>Interplay between excitons, phonons, and transport properties.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 3: Valleytronics & Topology -->
+          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-5 flex flex-col gap-3">
+            <div class="w-full h-32 sm:h-40 rounded-xl overflow-hidden bg-slate-900/70">
+              <img
+                src="img/research-valleytronics.jpg"
+                alt="Berry curvature and valley-contrasting physics illustration"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <h3 class="font-semibold text-sky-200 mb-2">
+                Valleytronics &amp; Topological Phenomena
+              </h3>
+              <p class="text-slate-300 mb-2">
+                We analyze Berry curvature, valley-resolved band structures, and spin–orbit induced
+                splittings for potential valleytronic device applications.
+              </p>
+              <ul class="list-disc list-inside text-slate-300 space-y-1">
+                <li>Valley-selective optical selection rules and spin–valley locking.</li>
+                <li>Symmetry breaking (substrates, strain, doping) and topological transitions.</li>
+                <li>Plumbene/hBN and related heterostructures.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 4: Methods & Software -->
+          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-5 flex flex-col gap-3">
+            <div class="w-full h-32 sm:h-40 rounded-xl overflow-hidden bg-slate-900/70">
+              <img
+                src="img/research-methods.jpg"
+                alt="Workflow of first-principles and Wannier-based calculations"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <h3 class="font-semibold text-fuchsia-200 mb-2">
+                Methods &amp; Software Development
+              </h3>
+              <p class="text-slate-300 mb-2">
+                We develop Python/Fortran tools around packages such as VASP, Quantum ESPRESSO,
+                Wannier90, EPW, and WannierBSE to automate workflows for band structures,
+                Berry curvature, excitons, and transport.
+              </p>
+              <ul class="list-disc list-inside text-slate-300 space-y-1">
+                <li>Non-uniform k-mesh generation and unfolding.</li>
+                <li>Post-processing for spin textures and Berry curvature maps.</li>
+                <li>Teaching-oriented scripts for students to learn quickly.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="border-t border-slate-800 hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 class="text-2xl font-semibold mb-4">Selected Publications</h2>
+        <p class="text-xs sm:text-sm text-slate-300 mb-4"></p>
+
+        <ol class="space-y-4 text-xs sm:text-sm text-slate-200 list-decimal list-inside">
+          <!-- 2025 -->
+          <li>
+            Nguyen Thanh Tien, Pham Thi Bich Thao, Duy Khanh Nguyen, Nhat Le Thanh, <strong>Vo Khuong Dien</strong>.
+            <span class="italic">“Thermoelectric properties of penta-InP<sub>5</sub>: A first-principles and machine learning study.”</span>
+            <strong>Journal of Applied Physics</strong> 137, 8 (2025).
+            DOI:
+            <a class="text-indigo-300 hover:text-indigo-200"
+               href="https://doi.org/10.1063/5.0251741"
+               target="_blank">
+              10.1063/5.0251741
+            </a>
+          </li>
+
+          <!-- 2024 -->
+          <li>
+            Nguyen Thanh Tien, Pham Thi Bich Thao, Nguyen Thi Han, <strong>Vo Khuong Dien</strong>.
+            <span class="italic">“Symmetry-driven valleytronics in single-layer tin chalcogenides SnS and SnSe.”</span>
+            <strong>PRB</strong> 109, 155416 (2024).
+            DOI:
+            <a class="text-indigo-300 hover:text-indigo-200"
+               href="https://doi.org/10.1103/PhysRevB.109.155416"
+               target="_blank">
+              10.1103/PhysRevB.109.155416
+            </a>
+          </li>
+
+          <!-- 2023 -->
+          <li>
+            <strong>Vo Khuong Dien</strong>, Pham Thi Bich Thao, Nguyen Thi Han, Nguyen Duy Khanh,
+            Le Vo Phuong Thuan, Ming-Fa Lin, Nguyen Thanh Tien.
+            <span class="italic">“Strain-controlled electronic transport and exciton radiative lifetime in monolayer GeS.”</span>
+            <strong>PRB</strong> 108, 205406 (2023).
+            DOI:
+            <a class="text-indigo-300 hover:text-indigo-200"
+               href="https://doi.org/10.1103/PhysRevB.108.205406"
+               target="_blank">
+              10.1103/PhysRevB.108.205406
+            </a>
+          </li>
+
+          <li>
+            <strong>Vo Khuong Dien</strong>, Nguyen Thanh Tien, Nguyen Duy Khanh,
+            Nguyen Thi Ngoc Han, Ming-Fa Lin.
+            <span class="italic">“From hexagonal to rocksalt structure: A computational study of gallium selenide under hydrostatic pressure.”</span>
+            <strong>PRB</strong> 108, 205150 (2023).
+            DOI:
+            <a class="text-indigo-300 hover:text-indigo-200"
+               href="https://doi.org/10.1103/PhysRevB.108.205150"
+               target="_blank">
+              10.1103/PhysRevB.108.205150
+            </a>
+          </li>
+
+          <li>
+            <strong>Vo Khuong Dien</strong>, Nguyen Thi Han, Wei Bang-Li, Kuang-I Lin, Ming-Fa Lin.
+            <span class="italic">“Correlation between orbital hybridizations, phonon spectra, and thermal properties of graphene, germanene, and plumbene.”</span>
+            <strong>pss (RRL)</strong> 17(5), 2200469 (2023).
+            DOI:
+            <a class="text-indigo-300 hover:text-indigo-200"
+               href="https://doi.org/10.1002/pssr.202200469"
+               target="_blank">
+              10.1002/pssr.202200469
+            </a>
+          </li>
+        </ol>
+
+        <p class="mt-4 text-[11px] sm:text-xs text-slate-400">
+          Full publication list: [link to Google Scholar / ORCID / institutional page]
+        </p>
+      </div>
+    </section>
+
+
+    <!-- TEACHING -->
+    <section id="teaching" class="border-t border-slate-800 bg-slate-900/40 hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 class="text-2xl font-semibold mb-4">Teaching</h2>
+        <p class="text-xs sm:text-sm text-slate-300 mb-4">
+          The lab is actively involved in teaching and curriculum development in physics,
+          semiconductor devices, and automotive systems.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-4">
+            <h3 class="font-semibold text-indigo-200 mb-1">
+              Introduction to Automotive Systems (AISI101)
+            </h3>
+            <p class="text-slate-300">
+              Fundamentals of vehicle structure, powertrain, braking, steering, and automotive
+              electronics, with an emphasis on system-level thinking.
+            </p>
+          </div>
+
+          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-4">
+            <h3 class="font-semibold text-emerald-200 mb-1">
+              Quantum Simulation &amp; Computational Materials Design
+            </h3>
+            <p class="text-slate-300">
+              Hands-on introduction to DFT/DFPT, Wannier90, EPW, and BSE methods for 2D materials,
+              including scripting in Python/Matlab.
+            </p>
+          </div>
+
+          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-4">
+            <h3 class="font-semibold text-sky-200 mb-1">
+              Condensed Matter Physics / Solid State Physics
+            </h3>
+            <p class="text-slate-300">
+              Band theory, phonons, transport, and modern topics such as Berry curvature
+              and topological materials.
+            </p>
+          </div>
+
+          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-4">
+            <h3 class="font-semibold text-fuchsia-200 mb-1">
+              Special Topics: Excitons in Low-Dimensional Systems
+            </h3>
+            <p class="text-slate-300">
+              Advanced topics in many-body perturbation theory and exciton physics,
+              aimed at graduate students and motivated undergraduates.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CODES / TOOLS -->
+    <section id="codes" class="border-t border-slate-800 hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 class="text-2xl font-semibold mb-4">Codes &amp; Tools</h2>
+        <p class="text-xs sm:text-sm text-slate-300 mb-4">
+          Inspired by the WannierBSE page in the reference site, you can list your public codes,
+          tutorials, and repositories here.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-4">
+            <h3 class="font-semibold text-indigo-200 mb-1">
+              WannierBSE–VN Tutorials
+            </h3>
+            <p class="text-slate-300 mb-2">
+              Step-by-step examples for exciton calculations in 2D materials using WannierBSE
+              and first-principles inputs.
+            </p>
+            <p class="text-slate-400 italic">
+              [Add link to GitHub or local page here]
+            </p>
+          </div>
+
+          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-4">
+            <h3 class="font-semibold text-emerald-200 mb-1">
+              Berry Curvature &amp; Spin Texture Toolkit
+            </h3>
+            <p class="text-slate-300 mb-2">
+              Python scripts to plot Berry curvature, spin textures, and valley-resolved
+              band structures from Wannier-based tight-binding models.
+            </p>
+            <p class="text-slate-400 italic">
+              [Add link to GitHub or local page here]
+            </p>
+          </div>
+
+          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-4">
+            <h3 class="font-semibold text-sky-200 mb-1">
+              Thermoelectric Transport Post-Processing
+            </h3>
+            <p class="text-slate-300 mb-2">
+              Scripts to read Sigma/Seebeck/Conductivity data, compute ZT, and generate
+              publication-quality plots.
+            </p>
+            <p class="text-slate-400 italic">
+              [Add link to GitHub or local page here]
+            </p>
+          </div>
+
+          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-4">
+            <h3 class="font-semibold text-fuchsia-200 mb-1">
+              Teaching Materials &amp; Notebooks
+            </h3>
+            <p class="text-slate-300 mb-2">
+              Jupyter notebooks and lecture notes for students learning computational
+              materials science and quantum transport.
+            </p>
+            <p class="text-slate-400 italic">
+              [Add link or download section here]
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="border-t border-slate-800 bg-slate-900/40 hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 class="text-2xl font-semibold mb-4">Gallery / Album</h2>
+        <p class="text-xs sm:text-sm text-slate-300 mb-4">
+          You can place group photos, workshop activities, conference pictures, etc.
+          For now, here is a simple placeholder grid.
+        </p>
+
+        <div class="grid sm:grid-cols-3 gap-4 text-xs text-slate-400">
+          <div class="h-32 rounded-xl bg-slate-800/70 flex items-center justify-center">
+            Group photo
+          </div>
+          <div class="h-32 rounded-xl bg-slate-800/70 flex items-center justify-center">
+            Workshop / seminar
+          </div>
+          <div class="h-32 rounded-xl bg-slate-800/70 flex items-center justify-center">
+            Conference trip
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="border-t border-slate-800 hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+
+        <div class="grid md:grid-cols-2 gap-6 text-xs sm:text-sm">
+          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-4">
+            <h3 class="font-semibold mb-2 text-slate-100">Address</h3>
+            <p class="text-slate-300">
+              [Department / Faculty]<br>
+              [University Name]<br>
+              [Street, District]<br>
+              [City], Vietnam
+            </p>
+
+            <h3 class="font-semibold mt-4 mb-2 text-slate-100">Email</h3>
+            <p class="text-slate-300">
+              dienvk[at]example.edu (replace with actual address)
+            </p>
+          </div>
+
+          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-4">
+            <h3 class="font-semibold mb-2 text-slate-100">For students</h3>
+            <p class="text-slate-300 mb-2">
+              If you are interested in joining the lab, please send:
+            </p>
+            <ul class="list-disc list-inside text-slate-300 space-y-1">
+              <li>Short CV</li>
+              <li>Transcript (if available)</li>
+              <li>A brief statement of your research interests</li>
+            </ul>
+            <p class="text-slate-300 mt-2">
+              Email subject:
+              <span class="italic">
+                “Application – Vo Khuong Dien Research Group – [Your Name]”
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 bg-slate-950">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] sm:text-xs text-slate-400">
+      <div>
+        © <span id="year"></span> Vo Khuong Dien Research Group. All rights reserved.
+      </div>
+      <div class="flex gap-3">
+        <span>Inspired by SJCheng group @ NYCU</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Small JS: navbar shadow, mobile menu, year, single-section view -->
+  <script>
+    const header = document.querySelector('header');
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const sections = document.querySelectorAll('main section');
+    const sectionLinks = document.querySelectorAll('a[data-section]');
+
+    function showSection(id) {
+      sections.forEach(sec => {
+        if (sec.id === id) {
+          sec.classList.remove('hidden');
+        } else {
+          sec.classList.add('hidden');
+        }
+      });
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.classList.add('nav-scrolled');
+      } else {
+        header.classList.remove('nav-scrolled');
+      }
+    });
+
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    sectionLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = link.getAttribute('data-section');
+        if (target) {
+          showSection(target);
+        }
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    showSection('welcome');
+  </script>
+</body>
+</html>
