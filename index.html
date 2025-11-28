@@ -8,14 +8,60 @@
         content="Vo Khuong Dien Research Group – Theoretical and computational research on Condensed Matter Physics and Nanoscience." />
   <!-- TailwindCSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom typography & UI tweaks -->
   <style>
     html {
       scroll-behavior: smooth;
     }
-    /* Simple shadow for sticky header */
+
+    /* === Font: Inter cho body, JetBrains Mono nếu cần code === */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.1px;
+    }
+
+    /* Heading rõ ràng, đậm hơn một chút */
+    h1, h2, h3, h4 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    /* Navbar chữ rõ và đều hơn */
+    nav a {
+      font-size: 0.85rem !important;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    /* Card mềm, có blur nhẹ, sang hơn */
+    .soft-card {
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(15, 23, 42, 0.78);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Ảnh trong card bo góc đẹp hơn */
+    .card-img {
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    /* Footer text nhỏ nhưng rõ */
+    footer {
+      font-size: 0.85rem !important;
+      color: #9ba3b5;
+    }
+
+    /* Shadow cho header khi scroll */
     .nav-scrolled {
-      box-shadow: 0 4px 10px rgba(0,0,0,0.07);
-      background: rgba(15,23,42,0.9);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+      background: rgba(15,23,42,0.92);
       backdrop-filter: blur(12px);
     }
   </style>
@@ -31,7 +77,7 @@
         </div>
         <div class="leading-tight">
           <div class="font-semibold text-sm sm:text-base">Vo Khuong Dien Research Group</div>
-          <div class="text-[11px] sm:text-xs text-slate-300">Computational Quantum Materials</div>
+          <div class="text-xs text-slate-300">Computational Quantum Materials</div>
         </div>
       </div>
 
@@ -81,7 +127,7 @@
 
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <p class="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-indigo-300 mb-4">
+          <p class="text-xs uppercase tracking-[0.25em] text-indigo-300 mb-4">
             Vo Khuong Dien Research Group
           </p>
           <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight mb-4">
@@ -107,25 +153,25 @@
 
           <!-- Quick bullets -->
           <div class="mt-8 grid grid-cols-2 gap-3 text-xs sm:text-sm">
-            <div class="border border-slate-800 rounded-xl p-3 bg-slate-900/60">
+            <div class="soft-card border border-slate-800 rounded-xl p-3">
               <div class="font-semibold text-indigo-200 mb-1">Excitons &amp; 2D materials</div>
               <p class="text-slate-300">
                 BSE, GW, Wannierization and model Hamiltonians for TMDCs, plumbene, penta-materials, etc.
               </p>
             </div>
-            <div class="border border-slate-800 rounded-xl p-3 bg-slate-900/60">
+            <div class="soft-card border border-slate-800 rounded-xl p-3">
               <div class="font-semibold text-emerald-200 mb-1">Thermoelectric &amp; transport</div>
               <p class="text-slate-300">
                 Electron–phonon coupling, lattice thermal conductivity, and transport coefficients.
               </p>
             </div>
-            <div class="border border-slate-800 rounded-xl p-3 bg-slate-900/60">
+            <div class="soft-card border border-slate-800 rounded-xl p-3">
               <div class="font-semibold text-sky-200 mb-1">Valleytronics &amp; topology</div>
               <p class="text-slate-300">
                 Berry curvature, topological protection, spin–valley locking in 2D systems.
               </p>
             </div>
-            <div class="border border-slate-800 rounded-xl p-3 bg-slate-900/60">
+            <div class="soft-card border border-slate-800 rounded-xl p-3">
               <div class="font-semibold text-fuchsia-200 mb-1">Educational activities</div>
               <p class="text-slate-300">
                 Courses, tutorials, and workshops on quantum simulation and computational materials.
@@ -136,7 +182,7 @@
 
         <!-- Right: News card -->
         <div class="lg:ml-6">
-          <div class="border border-slate-800 rounded-2xl bg-slate-900/60 p-5 sm:p-6 shadow-xl">
+          <div class="soft-card border border-slate-800 rounded-2xl p-5 sm:p-6">
             <h2 class="text-lg sm:text-xl font-semibold flex items-center gap-2 mb-3">
               <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
               News &amp; Highlights
@@ -191,7 +237,7 @@
 
         <!-- LEADER -->
         <div class="grid md:grid-cols-[2fr,3fr] gap-6 mb-8 items-start">
-          <div class="border border-slate-800 rounded-2xl bg-slate-900/60 p-5">
+          <div class="soft-card border border-slate-800 rounded-2xl p-5">
             <h3 class="font-semibold text-lg mb-1">Dr. Vo Khuong Dien</h3>
             <p class="text-xs text-indigo-200 mb-4 font-medium uppercase tracking-wide">
               Leader
@@ -239,25 +285,25 @@
           </div>
 
           <!-- Students & collaborators -->
-          <div class="border border-slate-800 rounded-2xl bg-slate-900/60 p-5">
+          <div class="soft-card border border-slate-800 rounded-2xl p-5">
             <h3 class="font-semibold text-base sm:text-lg mb-3">Students &amp; Collaborators</h3>
             <p class="text-xs sm:text-sm text-slate-300 mb-3">
               This is a template list. Replace with real names and positions.
             </p>
             <div class="grid sm:grid-cols-2 gap-3 text-xs sm:text-sm">
-              <div class="border border-slate-800 rounded-xl p-3 bg-slate-950/70">
+              <div class="soft-card border border-slate-800 rounded-xl p-3 bg-slate-950/70">
                 <div class="font-semibold text-slate-100">[Student A]</div>
                 <div class="text-slate-300">M.Sc. student – exciton dynamics in TMDC heterostructures.</div>
               </div>
-              <div class="border border-slate-800 rounded-xl p-3 bg-slate-950/70">
+              <div class="soft-card border border-slate-800 rounded-xl p-3 bg-slate-950/70">
                 <div class="font-semibold text-slate-100">[Student B]</div>
                 <div class="text-slate-300">B.Sc. student – Wannier-based band interpolation.</div>
               </div>
-              <div class="border border-slate-800 rounded-xl p-3 bg-slate-950/70">
+              <div class="soft-card border border-slate-800 rounded-xl p-3 bg-slate-950/70">
                 <div class="font-semibold text-slate-100">[Collaborator 1]</div>
                 <div class="text-slate-300">Thermoelectric transport in penta-materials.</div>
               </div>
-              <div class="border border-slate-800 rounded-xl p-3 bg-slate-950/70">
+              <div class="soft-card border border-slate-800 rounded-xl p-3 bg-slate-950/70">
                 <div class="font-semibold text-slate-100">[Collaborator 2]</div>
                 <div class="text-slate-300">Spin–valley physics and topological phenomena.</div>
               </div>
@@ -287,8 +333,8 @@
 
         <div class="grid md:grid-cols-2 gap-5 text-xs sm:text-sm">
           <!-- Card 1: Exciton Physics -->
-          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-5 flex flex-col gap-3">
-            <div class="w-full h-100 sm:h-120 rounded-xl overflow-hidden bg-slate-900/70">
+          <div class="soft-card border border-slate-800 rounded-2xl p-5 flex flex-col gap-3">
+            <div class="w-full h-100 sm:h-120 card-img bg-slate-900/70">
               <img
                 src="img/light-mater.jpg"
                 alt="Illustration of excitons in 2D materials"
@@ -308,24 +354,24 @@
                 valleytronic devices where information can be encoded and manipulated through valley polarization.
               </p>
               <ul class="list-disc list-inside text-slate-300 space-y-1">
-              <li>
-              Nguyen Thanh Tien, Pham Thi Bich Thao, Nguyen Thi Han, <strong>Vo Khuong Dien</strong>.
-              <span class="italic">“Symmetry-driven valleytronics in single-layer tin chalcogenides SnS and SnSe.”</span>
-              <strong>PRB</strong> 109, 155416 (2024).
-              DOI:
-              <a class="text-indigo-300 hover:text-indigo-200"
-               href="https://doi.org/10.1103/PhysRevB.109.155416"
-               target="_blank">
-               10.1103/PhysRevB.109.155416
-              </a>
-          </li>
+                <li>
+                  Nguyen Thanh Tien, Pham Thi Bich Thao, Nguyen Thi Han, <strong>Vo Khuong Dien</strong>.
+                  <span class="italic">“Symmetry-driven valleytronics in single-layer tin chalcogenides SnS and SnSe.”</span>
+                  <strong>PRB</strong> 109, 155416 (2024).
+                  DOI:
+                  <a class="text-indigo-300 hover:text-indigo-200"
+                     href="https://doi.org/10.1103/PhysRevB.109.155416"
+                     target="_blank">
+                    10.1103/PhysRevB.109.155416
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
 
           <!-- Card 2: Machine-Learning-Accelerated Thermoelectric Design -->
-          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-5 flex flex-col gap-3">
-            <div class="w-full h-50 sm:h-50 rounded-xl overflow-hidden bg-slate-900/70">
+          <div class="soft-card border border-slate-800 rounded-2xl p-5 flex flex-col gap-3">
+            <div class="w-full h-40 sm:h-52 card-img bg-slate-900/70">
               <img
                 src="img/Machine learning.jpg"
                 alt="Machine-Learning-Accelerated Thermoelectric Design"
@@ -338,26 +384,26 @@
               </h3>
               <p class="text-slate-300 mb-2">
                 This study uses first-principles calculations combined with machine-learning potentials
-                to explore the thermoelectric (TE) potential of the monolayer penta-InP5, a two-dimensional
-                material with a pentagonal lattice. The results reveal that penta-InP5 possesses remarkably
+                to explore the thermoelectric (TE) potential of the monolayer penta-InP<sub>5</sub>, a two-dimensional
+                material with a pentagonal lattice. The results reveal that penta-InP<sub>5</sub> possesses remarkably
                 low lattice thermal conductivity and favorable electronic transport properties — leading to
                 a high TE figure of merit (ZT) at room temperature: ~0.51 for hole doping and ~0.42 for electron doping. 
-                Additionally, penta-InP5 exhibits good mechanical flexibility (in-plane stiffness ~52 N/m, fracture strain ~23 %),
+                Additionally, penta-InP<sub>5</sub> exhibits good mechanical flexibility (in-plane stiffness ~52 N/m, fracture strain ~23 %),
                 making it a promising candidate for flexible and wearable thermoelectric applications. Using first-principles
                 electron–phonon coupling and phonon anharmonicity, we explore ways to tune lattice thermal conductivity and ZT in low-dimensional materials.
               </p>
               <ul class="list-disc list-inside text-slate-300 space-y-1">
-              <li>
-              Nguyen Thanh Tien, Pham Thi Bich Thao, Duy Khanh Nguyen, Nhat Le Thanh, <strong>Vo Khuong Dien</strong>.
-              <span class="italic">“Thermoelectric properties of penta-InP<sub>5</sub>: A first-principles and machine learning study.”</span>
-              <strong>Journal of Applied Physics</strong> 137, 8 (2025).
-              DOI:
-              <a class="text-indigo-300 hover:text-indigo-200"
-               href="https://doi.org/10.1063/5.0251741"
-               target="_blank">
-              10.1063/5.0251741
-            </a>
-          </li>
+                <li>
+                  Nguyen Thanh Tien, Pham Thi Bich Thao, Duy Khanh Nguyen, Nhat Le Thanh, <strong>Vo Khuong Dien</strong>.
+                  <span class="italic">“Thermoelectric properties of penta-InP<sub>5</sub>: A first-principles and machine learning study.”</span>
+                  <strong>Journal of Applied Physics</strong> 137, 8 (2025).
+                  DOI:
+                  <a class="text-indigo-300 hover:text-indigo-200"
+                     href="https://doi.org/10.1063/5.0251741"
+                     target="_blank">
+                    10.1063/5.0251741
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -456,7 +502,7 @@
         </p>
 
         <div class="grid md:grid-cols-2 gap-4 text-xs sm:text-sm">
-          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-4">
+          <div class="soft-card border border-slate-800 rounded-2xl p-4">
             <h3 class="font-semibold text-indigo-200 mb-1">
               Introduction to Automotive Systems (AISI101)
             </h3>
@@ -466,7 +512,7 @@
             </p>
           </div>
 
-          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-4">
+          <div class="soft-card border border-slate-800 rounded-2xl p-4">
             <h3 class="font-semibold text-emerald-200 mb-1">
               Quantum Simulation &amp; Computational Materials Design
             </h3>
@@ -476,7 +522,7 @@
             </p>
           </div>
 
-          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-4">
+          <div class="soft-card border border-slate-800 rounded-2xl p-4">
             <h3 class="font-semibold text-sky-200 mb-1">
               Condensed Matter Physics / Solid State Physics
             </h3>
@@ -486,7 +532,7 @@
             </p>
           </div>
 
-          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-4">
+          <div class="soft-card border border-slate-800 rounded-2xl p-4">
             <h3 class="font-semibold text-fuchsia-200 mb-1">
               Special Topics: Excitons in Low-Dimensional Systems
             </h3>
@@ -509,7 +555,7 @@
         </p>
 
         <div class="grid md:grid-cols-2 gap-4 text-xs sm:text-sm">
-          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-4">
+          <div class="soft-card border border-slate-800 rounded-2xl p-4">
             <h3 class="font-semibold text-indigo-200 mb-1">
               WannierBSE–VN Tutorials
             </h3>
@@ -522,7 +568,7 @@
             </p>
           </div>
 
-          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-4">
+          <div class="soft-card border border-slate-800 rounded-2xl p-4">
             <h3 class="font-semibold text-emerald-200 mb-1">
               Berry Curvature &amp; Spin Texture Toolkit
             </h3>
@@ -535,7 +581,7 @@
             </p>
           </div>
 
-          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-4">
+          <div class="soft-card border border-slate-800 rounded-2xl p-4">
             <h3 class="font-semibold text-sky-200 mb-1">
               Thermoelectric Transport Post-Processing
             </h3>
@@ -548,7 +594,7 @@
             </p>
           </div>
 
-          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-4">
+          <div class="soft-card border border-slate-800 rounded-2xl p-4">
             <h3 class="font-semibold text-fuchsia-200 mb-1">
               Teaching Materials &amp; Notebooks
             </h3>
@@ -593,7 +639,7 @@
         <h2 class="text-2xl font-semibold mb-4">Contact</h2>
 
         <div class="grid md:grid-cols-2 gap-6 text-xs sm:text-sm">
-          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-4">
+          <div class="soft-card border border-slate-800 rounded-2xl p-4">
             <h3 class="font-semibold mb-2 text-slate-100">Address</h3>
             <p class="text-slate-300">
               [Department / Faculty]<br>
@@ -608,7 +654,7 @@
             </p>
           </div>
 
-          <div class="border border-slate-800 rounded-2xl bg-slate-950/70 p-4">
+          <div class="soft-card border border-slate-800 rounded-2xl p-4">
             <h3 class="font-semibold mb-2 text-slate-100">For students</h3>
             <p class="text-slate-300 mb-2">
               If you are interested in joining the lab, please send:
@@ -691,14 +737,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
