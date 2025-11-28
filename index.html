@@ -118,72 +118,114 @@
 
   <!-- PAGE CONTENT -->
   <main class="pt-20">
-    <!-- HERO / WELCOME -->
-    <section id="welcome" class="relative overflow-hidden">
-      <div class="absolute inset-0 opacity-30 pointer-events-none" aria-hidden="true">
-        <div class="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-indigo-500 blur-3xl"></div>
-        <div class="absolute top-40 right-0 h-72 w-72 rounded-full bg-emerald-500 blur-3xl"></div>
+<section id="welcome" class="relative overflow-hidden">
+  <!-- Background gradient blobs -->
+  <div class="absolute inset-0 opacity-30 pointer-events-none" aria-hidden="true">
+    <div class="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-indigo-600 blur-3xl"></div>
+    <div class="absolute top-40 right-0 h-72 w-72 rounded-full bg-purple-600 blur-3xl"></div>
+  </div>
+
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
+
+    <!-- LEFT COLUMN -->
+    <div>
+      <p class="text-xs uppercase tracking-[0.25em] text-indigo-300 mb-4">
+        Vo Khuong Dien Research Group
+      </p>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight mb-4">
+        Theoretical &amp; Computational Research
+        <span class="block text-indigo-300">on Condensed Matter Physics and Nanoscience</span>
+      </h1>
+
+      <p class="text-sm sm:text-base text-slate-200 mb-5 leading-relaxed">
+        Our group explores the quantum behaviour of electrons, excitons, and phonons in 
+        low-dimensional materials using advanced theories and high-performance computing.
+        We combine first-principles methods (DFT, GW, BSE), Wannier-based modelling, and 
+        data-driven approaches to uncover new physical mechanisms governing 
+        <strong>light–matter interactions, exciton dynamics, valley polarization, electron–phonon scattering,</strong>
+        and <strong>thermoelectric transport</strong> in emerging 2D materials.
+      </p>
+
+      <p class="text-sm sm:text-base text-slate-200 mb-5 leading-relaxed">
+        In recent years, the group has expanded to include <strong>machine-learning-accelerated 
+        simulations</strong>, enabling rapid material screening, large-scale molecular dynamics, 
+        and automatic workflows for complex quantum-mechanical calculations. 
+        We actively develop open-source tools, contribute to community teaching, and 
+        collaborate with national and international institutions working on quantum materials, 
+        nanoscience, and computational physics.
+      </p>
+
+      <p class="text-sm sm:text-base text-slate-300 mb-6">
+        Our long-term vision is to build a comprehensive platform for simulating, designing, 
+        and engineering novel quantum materials toward applications in 
+        <strong>optoelectronics, energy conversion, nanoscale devices,</strong> and 
+        <strong>future valley-based information technologies</strong>.
+      </p>
+
+      <!-- BUTTONS -->
+      <div class="flex flex-wrap gap-3">
+        <a href="#" data-section="people"
+           class="inline-flex items-center justify-center rounded-full bg-indigo-500 px-5 py-2 text-xs sm:text-sm font-medium hover:bg-indigo-400 transition-colors">
+          Join Our Group
+        </a>
+        <a href="#" data-section="research"
+           class="inline-flex items-center justify-center rounded-full border border-slate-600 px-5 py-2 text-xs sm:text-sm font-medium hover:border-indigo-400 hover:text-indigo-200 transition-colors">
+          Explore Research
+        </a>
+        <a href="#" data-section="contact"
+           class="inline-flex items-center justify-center rounded-full border border-slate-600 px-5 py-2 text-xs sm:text-sm font-medium hover:border-indigo-400 hover:text-indigo-200 transition-colors">
+          Contact
+        </a>
       </div>
+    </div>
 
-      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <p class="text-xs uppercase tracking-[0.25em] text-indigo-300 mb-4">
-            Vo Khuong Dien Research Group
-          </p>
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight mb-4">
-            Theoretical &amp; Computational Research
-            <span class="block text-indigo-300">on Condensed Matter Physics and Nanoscience</span>
-          </h1>
-          <p class="text-sm sm:text-base text-slate-200 mb-4">
-            Our group focuses on exciton physics, light–matter interactions, and electron–phonon scattering associated 
-            with thermoelectric transport in low-dimensional materials using first-principles and many-body methods.
-          </p>
+    <!-- RIGHT COLUMN: NEWS CARD -->
+    <div class="lg:ml-6">
+      <div class="soft-card border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-lg">
+        <h2 class="text-lg sm:text-xl font-semibold flex items-center gap-2 mb-4">
+          <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          News &amp; Highlights
+        </h2>
 
-          <div class="flex flex-wrap gap-3">
-            <a href="#" data-section="people"
-               class="inline-flex items-center justify-center rounded-full bg-indigo-500 px-4 py-2 text-xs sm:text-sm font-medium hover:bg-indigo-400 transition-colors">
-              Join our group
-            </a>
-            <a href="#" data-section="contact"
-               class="inline-flex items-center justify-center rounded-full border border-slate-600 px-4 py-2 text-xs sm:text-sm font-medium hover:border-indigo-400 hover:text-indigo-200 transition-colors">
-              Contact
-            </a>
-          </div>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+          We maintain an active portfolio of collaborative research, student projects, 
+          and international activities. Below are some of our recent milestones.
+        </p>
 
-        <!-- Right: News card -->
-        <div class="lg:ml-6">
-          <div class="soft-card border border-slate-800 rounded-2xl p-5 sm:p-6">
-            <h2 class="text-lg sm:text-xl font-semibold flex items-center gap-2 mb-3">
-              <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              News &amp; Highlights
-            </h2>
-            <ul class="space-y-2 text-xs sm:text-sm text-slate-200">
-              <li>
-                <span class="font-semibold text-indigo-200">2025 ·</span>
-                Submitted a manuscript on exciton–phonon coupling in plumbene-based heterostructures.
-              </li>
-              <li>
-                <span class="font-semibold text-indigo-200">2024 ·</span>
-                Launched the <span class="italic">WannierBSE</span> tutorial series for 2D exciton calculations.
-              </li>
-              <li>
-                <span class="font-semibold text-indigo-200">2023 ·</span>
-                Published works on tunable thermal transport in penta-graphene and penta-XP<sub>5</sub> systems.
-              </li>
-              <li>
-                <span class="font-semibold text-indigo-200">2022 ·</span>
-                Started collaborations on valley splitting and symmetry-breaking in HfN<sub>2</sub>.
-              </li>
-            </ul>
+        <ul class="space-y-3 text-xs sm:text-sm text-slate-200">
+          <li>
+            <span class="font-semibold text-indigo-200">2025 ·</span>
+            Submitted a full GW–BSE study on exciton–phonon coupling in plumbene-based heterostructures,
+            revealing strong phonon-driven exciton renormalization.
+          </li>
+          <li>
+            <span class="font-semibold text-indigo-200">2024 ·</span>
+            Released the <strong>WannierBSE Tutorial Series</strong> for 2D exciton simulations, 
+            with hands-on MATLAB/Python workflows and HPC examples.
+          </li>
+          <li>
+            <span class="font-semibold text-indigo-200">2023 ·</span>
+            Published multiple papers on <strong>tunable thermal transport</strong> and 
+            <strong>structure-dependent electron mobility</strong> in penta-structured materials.
+          </li>
+          <li>
+            <span class="font-semibold text-indigo-200">2022 ·</span>
+            Initiated collaborative projects on <strong>valley splitting and symmetry-breaking</strong> 
+            in HfN<sub>2</sub>, demonstrating strong spin–valley coupling under strain.
+          </li>
+        </ul>
 
-            <a href="#" data-section="news"
-               class="mt-4 inline-flex text-[11px] sm:text-xs text-indigo-300 hover:text-indigo-200 transition-colors">
-              View all news →
-            </a>
-          </div>
-        </div>
+        <a href="#" data-section="news"
+           class="mt-5 inline-flex text-[11px] sm:text-xs text-indigo-300 hover:text-indigo-200 transition-colors">
+          View all news →
+        </a>
       </div>
-    </section>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- NEWS FULL SECTION -->
     <section id="news" class="border-t border-slate-800 bg-slate-900/40 hidden">
@@ -667,5 +709,6 @@
   </script>
 </body>
 </html>
+
 
 
